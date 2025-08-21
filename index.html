@@ -3,19 +3,21 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Calculadora de IVA España – 21% / 10% / 4%</title>
-  <meta name="description" content="Calcula el IVA en España (21%, 10% o 4%) al instante. Introduce base imponible o precio con IVA y obtén el desglose. 100% gratis y sin registros." />
-  <link rel="canonical" href="https://tusitio.example/calculadora-iva-espana" />
-  <meta property="og:title" content="Calculadora de IVA España – 21% / 10% / 4%" />
-  <meta property="og:description" content="Calcula el IVA en España al instante. Elige 21%, 10% o 4% y obtén el desglose completo. Gratis, rápido y sin registros." />
+  <title>Calculadora de IVA España – Gratis y Online (21% / 10% / 4%)</title>
+  <meta name="description" content="Calcula el IVA en España (21%, 10% o 4%) al instante. Introduce base imponible o precio con IVA y obtén el desglose. 100% gratis, rápido y online." />
+  <link rel="canonical" href="https://utilixdev.github.io/Calculadora-IVA-Espana/" />
+  <meta property="og:title" content="Calculadora de IVA España – Gratis y Online" />
+  <meta property="og:description" content="Calcula el IVA en España al instante. Elige 21%, 10% o 4% y obtén el desglose completo. Gratis, rápido y online." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://tusitio.example/og-iva.png" />
+  <meta property="og:url" content="https://utilixdev.github.io/Calculadora-IVA-Espana/" />
+  <meta property="og:image" content="https://utilixdev.github.io/Calculadora-IVA-Espana/og-iva.png" />
   <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="favicon.png" type="image/png" />
   <style>
     :root { --bg:#0b1220; --card:#121a2b; --fg:#eaf2ff; --muted:#9fb2d9; --accent:#60a5fa; --ok:#22c55e; }
     * { box-sizing: border-box; }
     body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif; color: var(--fg); background: radial-gradient(1200px 800px at 20% -10%, #15203a, var(--bg)); }
-    header { max-width: 980px; margin: 0 auto; padding: 24px 16px 0; }
+    header { max-width: 980px; margin: 0 auto; padding: 24px 16px 0; text-align: center; }
     header h1 { font-size: clamp(1.6rem, 2.6vw, 2.4rem); margin: 6px 0; }
     header p { color: var(--muted); margin: 0 0 16px; }
     main { max-width: 980px; margin: 0 auto; padding: 16px; }
@@ -35,32 +37,22 @@
     .kpi { display:grid; grid-template-columns: 1fr 1fr; gap:12px; margin-top: 10px; }
     .kpi div { padding: 12px; border-radius: 12px; background:#0f172a; border:1px solid rgba(255,255,255,0.07); }
     .cta { display:flex; gap:10px; flex-wrap: wrap; margin-top: 14px; }
-    .btn { cursor: pointer; border: none; border-radius: 12px; padding: 12px 16px; font-weight: 600; background: var(--accent); color: #061226; }
+    .btn { cursor: pointer; border: none; border-radius: 12px; padding: 12px 16px; font-weight: 600; background: var(--accent); color: #061226; transition: all 0.2s ease; }
+    .btn:hover { opacity: 0.9; transform: translateY(-1px); }
     .btn.secondary { background: transparent; color: var(--fg); border: 1px solid rgba(255,255,255,0.18); }
-    footer { max-width:980px; margin: 0 auto; padding: 32px 16px 64px; color: var(--muted); font-size: 0.9rem; }
+    footer { max-width:980px; margin: 0 auto; padding: 32px 16px 64px; color: var(--muted); font-size: 0.9rem; text-align: center; }
     .legal { font-size: 0.8rem; opacity: 0.9; }
     .pill { display:inline-block; padding: 6px 10px; border-radius: 999px; background: rgba(34,197,94,0.15); color: #86efac; font-weight: 700; font-size: 0.75rem; letter-spacing: .4px; }
   </style>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebApplication",
-    "name": "Calculadora de IVA España",
-    "url": "https://tusitio.example/calculadora-iva-espana",
-    "applicationCategory": "BusinessApplication",
-    "operatingSystem": "Web",
-    "description": "Calcula el IVA en España (21%, 10% o 4%) al instante. Introduce base imponible o precio con IVA y obtén el desglose.",
-    "offers": {"@type":"Offer", "price":"0", "priceCurrency":"EUR"}
-  }
-  </script>
 </head>
 <body>
   <header>
-    <span class="pill">Gratis · Sin registros</span>
-    <h1>Calculadora de IVA España</h1>
+    <span class="pill">Gratis · Online · Sin registros</span>
+    <h1>Calculadora de IVA para España</h1>
     <p>Introduce <strong>base imponible</strong> o <strong>precio con IVA</strong>, elige el tipo (21%, 10% o 4%) y obtén el desglose al instante.</p>
   </header>
   <main class="grid" role="main">
+    <!-- Calculadora -->
     <section class="card" aria-labelledby="calc-title">
       <h2 id="calc-title" style="margin:0 0 8px">Calcula tu IVA</h2>
 
@@ -97,6 +89,7 @@
       </div>
     </section>
 
+    <!-- Explicación -->
     <section class="card" aria-labelledby="help-title">
       <h2 id="help-title" style="margin:0 0 8px">Cómo funciona</h2>
       <p class="hint">Selecciona el tipo de IVA y escribe la <strong>base imponible</strong> <em>o</em> el <strong>precio final con IVA</strong>. La calculadora hará el resto.</p>
@@ -108,16 +101,16 @@
       <hr style="border-color:rgba(255,255,255,0.08)" />
       <p class="hint">¿Te fue útil? Compártela:</p>
       <div class="row">
-        <a class="btn secondary" id="share" href="#" rel="nofollow">Compartir</a>
-        <a class="btn secondary" id="tweet" href="#" rel="nofollow">Twitter/X</a>
-        <a class="btn secondary" id="wa" href="#" rel="nofollow">WhatsApp</a>
+        <a class="btn secondary" id="share" href="#" rel="nofollow noopener noreferrer">Compartir</a>
+        <a class="btn secondary" id="tweet" href="#" rel="nofollow noopener noreferrer">Twitter/X</a>
+        <a class="btn secondary" id="wa" href="#" rel="nofollow noopener noreferrer">WhatsApp</a>
       </div>
     </section>
   </main>
 
   <footer>
-    <p>© <span id="year"></span> Calculadora de IVA España · Hecho por <a href="#" style="color:#93c5fd; text-decoration: none;">utilixdev</a></p>
-    <p class="legal">Aviso: esta herramienta es informativa; verifica con tu asesor para casos específicos.</p>
+    <p>© <span id="year"></span> Calculadora de IVA España · Desarrollado por <a href="https://github.com/utilixdev" target="_blank" rel="noopener noreferrer" style="color:#93c5fd; text-decoration: none;">utilixdev</a></p>
+    <p class="legal">Aviso: esta herramienta es informativa; consulta a tu asesor fiscal para casos específicos.</p>
   </footer>
 
   <script>
@@ -160,7 +153,6 @@
           tot = totalVal;
           base.value = isFinite(b) ? round2(b).toFixed(2) : '';
         } else if (!isNaN(baseVal) && !isNaN(totalVal)) {
-          // Si los dos están rellenos, recalcula total desde base para mantener coherencia
           iva = baseVal * rate / 100;
           tot = baseVal + iva;
           total.value = round2(tot).toFixed(2);
@@ -196,7 +188,6 @@
       document.getElementById('tweet').href = `https://twitter.com/intent/tweet?text=${encodeURIComponent('Calcula IVA 21%, 10% o 4% al instante')}&url=${encodeURIComponent(shareUrl())}`;
       document.getElementById('wa').href = `https://wa.me/?text=${encodeURIComponent('Calcula IVA 21%, 10% o 4% al instante ' + shareUrl())}`;
 
-      // iniciar
       compute();
     })();
   </script>
