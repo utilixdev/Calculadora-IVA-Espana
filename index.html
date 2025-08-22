@@ -203,5 +203,29 @@
       compute();
     })();
   </script>
+  <!-- Banner de Cookies -->
+<div id="cookie-banner" style="position: fixed; bottom: 0; left: 0; right: 0; background: #1e3a8a; color: #fff; padding: 15px; display: flex; justify-content: space-between; align-items: center; font-size: 14px; z-index: 9999; box-shadow: 0 -2px 8px rgba(0,0,0,0.2);">
+  <span>
+    Utilizamos cookies para mejorar tu experiencia y mostrar publicidad personalizada. 
+    <a href="cookies.html" style="color: #93c5fd; text-decoration: underline;">Más información</a>.
+  </span>
+  <button id="accept-cookies" style="background: #facc15; border: none; padding: 8px 16px; margin-left: 15px; border-radius: 5px; cursor: pointer; font-weight: bold; color: #000;">
+    Aceptar
+  </button>
+</div>
+
+<script>
+  // Mostrar solo si no ha sido aceptado
+  if (localStorage.getItem("cookies-accepted")) {
+    document.getElementById("cookie-banner").style.display = "none";
+  }
+
+  // Guardar preferencia
+  document.getElementById("accept-cookies").addEventListener("click", function() {
+    localStorage.setItem("cookies-accepted", "true");
+    document.getElementById("cookie-banner").style.display = "none";
+  });
+</script>
+
 </body>
 </html>
