@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto - UtilixDev</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 700px;
+      margin: 50px auto;
+      padding: 20px;
+      background: #f9fafb;
+      color: #333;
+      line-height: 1.6;
+    }
+    h1 {
+      text-align: center;
+      color: #1e40af;
+      margin-bottom: 20px;
+    }
+    p {
+      margin-bottom: 15px;
+    }
+    .card {
+      background: #FFFFF0;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(1,0,0,0.15);
+    }
+    a {
+      color: #1e40af;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      text-align: center;
+      margin-top: 250px;
+      font-size: 14px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Contacto</h1>
+    <p>Si deseas ponerte en contacto con nosotros, puedes escribirnos al siguiente correo:</p>
+    <p><strong>Email:</strong> <a href="mailto:contacto.utilixdev@gmail.com">contacto.utilixdev@gmail.com</a></p>
+    <p>Responderemos tu consulta lo antes posible.</p>
+    <p style="text-align:center; margin-top:20px;">
+      <a href="index.html">← Volver a la Calculadora</a>
+    </p>
+  </div>
+  <footer>
+    &copy; <span id="year"></span> UtilixDev
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
